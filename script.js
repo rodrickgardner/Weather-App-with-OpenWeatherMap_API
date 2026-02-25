@@ -6,8 +6,10 @@
 
 // Your API key from OpenWeatherMap
 // 🔑 REPLACE THIS WITH YOUR ACTUAL API KEY
-//const API_KEY = '*********'; 
+// You can uncomment the line below and add your API key for your code to work, in such a case you'll have to comment out the same const API_KEY used in the lines below
+//const API_KEY = 'YOUR_API_KEY_HERE'; 
 
+// When using environment variables
 // Replace hardcoded API key with:
 const API_KEY = process.env.WEATHER_API_KEY || 'YOUR_API_KEY_HERE';
 
