@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌤️ Kenyan Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🇰🇪 Kenyan Weather</h1>
+        
+        <!-- City Selection Section -->
+        <div class="search-section">
+            <label for="city-select">Choose a city:</label>
+            <select id="city-select" class="city-select">
+                <option value="">-- Select a city --</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Mombasa">Mombasa</option>
+                <option value="Kisumu">Kisumu</option>
+                <option value="Nakuru">Nakuru</option>
+                <option value="Eldoret">Eldoret</option>
+            </select>
+            
+            <!-- Alternative: Search input for any city -->
+            <div class="search-alternative">
+                <p>Or search any city:</p>
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Weather Display Section -->
+        <div id="weather-result" class="weather-card" style="display: none;">
+            <!-- Loading indicator (hidden by default) -->
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Fetching weather data...</p>
+            </div>
+            
+            <!-- Weather info (hidden by default) -->
+            <div id="weather-info">
+                <h2 id="city-name"></h2>
+                
+                <div class="weather-main">
+                    <img id="weather-icon" src="" alt="Weather icon">
+                    <div class="temperature">
+                        <span id="temp-value"></span>
+                        <span id="temp-unit">°C</span>
+                    </div>
+                </div>
+                
+                <p id="weather-description" class="weather-desc"></p>
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Humidity</span>
+                        <span id="humidity" class="detail-value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Wind Speed</span>
+                        <span id="wind-speed" class="detail-value"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Error message (hidden by default) -->
+            <div id="error-message" class="error" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
