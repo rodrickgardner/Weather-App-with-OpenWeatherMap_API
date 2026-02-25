@@ -6,7 +6,10 @@
 
 // Your API key from OpenWeatherMap
 // 🔑 REPLACE THIS WITH YOUR ACTUAL API KEY
-const API_KEY = '213b2dc540f3a38650df0e66ed14d8f5'; 
+//const API_KEY = '*********'; 
+
+// Replace hardcoded API key with:
+const API_KEY = process.env.WEATHER_API_KEY || 'YOUR_API_KEY_HERE';
 
 // Base URL for OpenWeatherMap API
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
